@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,61 +9,87 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background: #0B0F19;
+    }
+
+    @keyframes gradientShift {
+      0%, 100% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+    }
+
+    .animated-gradient {
+      background: linear-gradient(270deg, #28E0AE, #0EBEFF, #8B5CF6);
+      background-size: 600% 600%;
+      animation: gradientShift 8s ease infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s ease-out forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
   </style>
 </head>
-<body class="bg-gradient-to-br from-[#0f172a] to-[#0e7490] text-white">
+<body class="text-white">
 
-  <!-- Hero -->
+  <!-- Hero Section -->
   <section class="min-h-screen flex flex-col items-center justify-center text-center px-6">
-    <h1 class="text-4xl md:text-6xl font-bold bg-gradient-to-r from-teal-400 to-cyan-300 bg-clip-text text-transparent">
-      Meet Cinch — Your A.I. Money Assistant
-    </h1>
-    <p class="mt-6 max-w-xl text-lg text-gray-200">
-      Sync all your accounts. Understand your finances. Get smart, private, real-time recommendations — powered by Cinch.
+    <h1 class="text-5xl md:text-7xl font-extrabold animated-gradient fade-up">Cinch is your A.I. Money Assistant</h1>
+    <p class="mt-6 max-w-xl text-lg text-gray-400 fade-up" style="animation-delay: 0.3s;">
+      Smarter budgeting. Personalized insights. All your accounts in one place — private, secure, intelligent.
     </p>
-    <form action="https://formspree.io/f/yourformid" method="POST" class="mt-8 w-full max-w-md flex flex-col sm:flex-row gap-4">
-      <input type="email" name="email" placeholder="Your email" required
+    <form action="https://formspree.io/f/yourformid" method="POST" class="mt-8 w-full max-w-md flex flex-col sm:flex-row gap-4 fade-up" style="animation-delay: 0.6s;">
+      <input type="email" name="email" placeholder="Enter your email" required
         class="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
       <button type="submit"
-        class="px-6 py-3 bg-cyan-400 hover:bg-cyan-500 transition text-black rounded-lg font-medium w-full sm:w-auto">
+        class="px-6 py-3 bg-gradient-to-r from-cyan-400 to-green-300 hover:brightness-110 transition text-black rounded-lg font-semibold w-full sm:w-auto">
         Join Waitlist
       </button>
     </form>
   </section>
 
-  <!-- Features -->
-  <section class="py-24 bg-gray-950">
-    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 text-left text-white">
-      <div>
-        <h3 class="text-xl font-semibold mb-2">🔄 All Accounts, One Dashboard</h3>
-        <p class="text-gray-400">Banks, credit cards, investments, crypto — connect everything and see it in one intelligent view.</p>
+  <!-- Features Section -->
+  <section class="py-24 px-6">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-left">
+      <div class="fade-up" style="animation-delay: 0.2s;">
+        <h3 class="text-xl font-semibold mb-2 text-cyan-400">🔄 Unified Finances</h3>
+        <p class="text-gray-400">Connect your banks, cards, investments, and crypto in one secure view — always up to date.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">🧠 Smart Financial Insights</h3>
-        <p class="text-gray-400">Cinch learns how you spend and helps you plan, save, and optimize. Like a money coach in your pocket.</p>
+      <div class="fade-up" style="animation-delay: 0.4s;">
+        <h3 class="text-xl font-semibold mb-2 text-green-300">🧠 Personalized AI</h3>
+        <p class="text-gray-400">Cinch learns your spending patterns and delivers bite-sized insights to help you grow.</p>
       </div>
-      <div>
-        <h3 class="text-xl font-semibold mb-2">🔐 Privacy Comes First</h3>
-        <p class="text-gray-400">We never sell your data. Ever. Your info is encrypted, protected, and belongs only to you.</p>
+      <div class="fade-up" style="animation-delay: 0.6s;">
+        <h3 class="text-xl font-semibold mb-2 text-violet-300">🔐 Privacy First</h3>
+        <p class="text-gray-400">Zero ads. Zero data selling. Full encryption. You're in control — always.</p>
       </div>
     </div>
   </section>
 
-  <!-- App Preview -->
-  <section class="py-24 bg-gray-900 text-center px-6">
-    <h2 class="text-3xl font-semibold mb-4 text-white">Your Money, Reimagined</h2>
-    <p class="text-gray-400 max-w-xl mx-auto mb-10">Get actionable recommendations, personalized tips, and live financial clarity in the palm of your hand.</p>
-    <!-- Placeholder App Screens -->
-    <div class="flex flex-wrap justify-center gap-8">
-      <img src="https://via.placeholder.com/200x400.png?text=App+Screen+1" class="rounded-xl shadow-lg" alt="App screen 1" />
-      <img src="https://via.placeholder.com/200x400.png?text=App+Screen+2" class="rounded-xl shadow-lg" alt="App screen 2" />
+  <!-- Screenshots -->
+  <section class="py-24 px-6 text-center">
+    <h2 class="text-3xl font-bold mb-4 fade-up">Your Financial Life, Reimagined</h2>
+    <p class="text-gray-400 max-w-xl mx-auto mb-12 fade-up" style="animation-delay: 0.2s;">
+      Real-time insights. Intelligent notifications. Beautiful dashboards. All powered by Cinch.
+    </p>
+    <div class="flex flex-wrap justify-center gap-6 fade-up" style="animation-delay: 0.4s;">
+      <img src="https://via.placeholder.com/200x400.png?text=App+1" class="rounded-xl shadow-lg" alt="Cinch app screenshot 1" />
+      <img src="https://via.placeholder.com/200x400.png?text=App+2" class="rounded-xl shadow-lg" alt="Cinch app screenshot 2" />
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="py-10 text-center text-sm text-gray-400 bg-gray-950 border-t border-gray-800">
-    © 2025 Cinch Money · Your AI-powered financial clarity.
+  <footer class="text-center text-sm text-gray-500 py-10 border-t border-gray-800 fade-up">
+    © 2025 Cinch Money — Built for clarity, powered by AI.
   </footer>
 
 </body>
