@@ -1,60 +1,63 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cinch Money – Take Back Control</title>
-  <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+  <title>Cinch Money – Smarter Finances, Less Stress</title>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
   <style>
     body {
-      background-color: #f9fafb;
-    }
-    .hero {
-      text-align: center;
-      padding: 4rem 1rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-    }
-    .features {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 2rem 1rem;
-    }
-    .footer {
-      text-align: center;
-      padding: 2rem 1rem;
-      font-size: 0.875rem;
-      color: #666;
+      font-family: 'Space Grotesk', sans-serif;
     }
   </style>
 </head>
-<body>
+<body class="bg-gray-950 text-white">
 
-  <main class="container">
-    <section class="hero">
-      <h1>All your money. One smart app.</h1>
-      <p>Cinch syncs your accounts and gives you AI-powered insights — without the chaos.</p>
-      <form action="https://formspree.io/f/yourformid" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required />
-        <button type="submit">Join the Waitlist</button>
-      </form>
-    </section>
+  <!-- Hero Section -->
+  <section class="min-h-screen flex flex-col items-center justify-center text-center px-6 bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a]">
+    <h1 class="text-4xl sm:text-6xl font-semibold leading-tight mb-4 bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
+      Take back control of your money
+    </h1>
+    <p class="max-w-xl text-gray-300 text-lg mb-8">
+      Cinch syncs all your financial accounts and gives you real-time, AI-powered recommendations. No clutter. No ads. Just clarity.
+    </p>
+    <form action="https://formspree.io/f/yourformid" method="POST" class="flex flex-col sm:flex-row items-center gap-4 w-full max-w-md">
+      <input type="email" name="email" placeholder="Your email" required
+        class="w-full px-4 py-3 rounded-lg text-gray-900 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+      <button type="submit"
+        class="px-6 py-3 bg-blue-500 hover:bg-blue-600 transition text-white rounded-lg font-medium w-full sm:w-auto">
+        Join Waitlist
+      </button>
+    </form>
+  </section>
 
-    <section class="features">
-      <ul>
-        <li><strong>🔄 Sync Everything:</strong> Connect bank, cards, and investments in seconds.</li>
-        <li><strong>🧠 AI-Powered Tips:</strong> Save more, spend smarter — effortlessly.</li>
-        <li><strong>🧘 Focused Design:</strong> No ads. No noise. Just clarity.</li>
-        <li><strong>🔐 Data-First Privacy:</strong> Your data is never for sale. Period.</li>
-      </ul>
-    </section>
+  <!-- Features Section -->
+  <section class="py-20 px-6 bg-gray-900">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+      <div>
+        <h2 class="text-3xl font-semibold mb-4 text-cyan-400">🔄 Unified Accounts</h2>
+        <p class="text-gray-300">Connect banks, cards, and crypto wallets into one simple dashboard. Your full financial life in one place.</p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-semibold mb-4 text-cyan-400">🧠 AI Recommendations</h2>
+        <p class="text-gray-300">Our AI engine learns your habits and gives you simple, clear tips to save, invest, and manage better.</p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-semibold mb-4 text-cyan-400">🔐 Privacy First</h2>
+        <p class="text-gray-300">Your data stays yours. We don’t sell it. We don’t advertise. We don’t profile. That’s our promise.</p>
+      </div>
+      <div>
+        <h2 class="text-3xl font-semibold mb-4 text-cyan-400">💡 Built for Simplicity</h2>
+        <p class="text-gray-300">No gamification. No bloat. Just intelligent tools to help you get ahead, one smart decision at a time.</p>
+      </div>
+    </div>
+  </section>
 
-    <section class="footer">
-      <p>© 2025 Cinch Money — Built for humans, not hedge funds.</p>
-    </section>
-  </main>
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-10 bg-gray-950 border-t border-gray-800">
+    © 2025 Cinch Money · Built for humans, not hedge funds.
+  </footer>
 
 </body>
 </html>
